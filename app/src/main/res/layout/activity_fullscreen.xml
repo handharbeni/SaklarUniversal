@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.SaklarUniversal.FullscreenContainer"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="8dp"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:gravity="center"
+            android:id="@+id/secondPart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="INFORMATION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/on"
+                android:text="ON"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/off"
+                android:text="OFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            app:layout_constraintTop_toBottomOf="@id/secondPart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/mainPart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
